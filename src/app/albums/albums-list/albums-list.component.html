@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+
+  <label for="album" placeholder="saisir album">Chercher album </label>
+  <input type="text" id="album" name="name" [(ngModel)]="inputUserSaisie">
+  <button class="submit"  (click)="onSearchAlbum()" >Rechercher </button>
+
+  <tr>
+    <th scope="col">TITRE</th>
+    <th scope="col">DETAIL</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let album of albumsListView">
+    <th scope="row">{{album.title}}</th>
+    <td><button [routerLink]="['/albums/',album.id]" type="button" class="btn btn-info">DETAIL</button></td>
+  </tr>
+
+  </tbody>
+</table>
+

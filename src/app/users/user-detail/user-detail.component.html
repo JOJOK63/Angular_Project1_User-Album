@@ -1,0 +1,13 @@
+<h2>Liste des albums de "{{userDetail.name.toUpperCase()}}"</h2>
+<table class="table">
+  <thead>
+  <th>ID</th>
+  <th>TITRE</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let album of userDetailAlbum">
+      <th scope="row"> {{album.id}}</th>
+      <td><a [routerLink]="['/albums',album.id]">{{album.title}}</a></td>
+    </tr>
+  </tbody>
+</table>

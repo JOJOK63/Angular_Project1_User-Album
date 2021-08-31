@@ -1,0 +1,15 @@
+<h2>Liste des photos de "{{albumDetail.title.toUpperCase()}}"</h2>
+<table class="table">
+  <thead>
+  <th>ID</th>
+  <th>TITRE</th>
+  <th>IMAGE</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let photo of albumDetailPhoto">
+    <th scope="row"> {{photo.id}}</th>
+    <td>{{photo.title}}</td>
+    <td><img src="{{photo.thumbnailUrl}}" alt=""></td>
+  </tr>
+  </tbody>
+</table>

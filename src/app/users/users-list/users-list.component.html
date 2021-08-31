@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+
+  <label for="user" placeholder="saisir utilisateur">Chercher utilisateur</label>
+  <input type="text" id="user" name="name" [(ngModel)]="inputUserSaisie">
+  <button class="submit"  (click)="onSearchUser()" >Rechercher </button>
+
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">NOM</th>
+    <th scope="col">DETAIL</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of usersListView">
+    <th scope="row">{{user.id}}</th>
+    <td>{{user.name}}</td>
+    <td><button [routerLink]="['/users/',user.id]" type="button" class="btn btn-info">DETAIL</button></td>
+  </tr>
+
+  </tbody>
+</table>
